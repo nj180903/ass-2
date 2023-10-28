@@ -1,0 +1,25 @@
+package dsa;
+
+import java.util.Arrays;
+
+public class squaredarray {
+    public static void main(String[] args) {
+        int[] nums = {-4, -1, 0, 3, 10};
+        int[] j = squareArray(nums);
+        for (int i : j) {
+            System.out.println(i);
+        }
+    }
+
+    public static int[] squareArray(int[] nums) {
+        int[] res = new int[nums.length];
+
+        for (int i = 0; i < nums.length; i++) {
+            res[i] = nums[i] * nums[i];
+        }
+
+        Arrays.sort(res);
+
+        return res;
+    }
+}
